@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("fonts/PlayfairDisplay-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/PlayfairDisplay-Bold.woff2") format("woff2"),
+    url("fonts/PlayfairDisplay-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/PlayfairDisplay-Italic.woff2") format("woff2"),
+    url("fonts/PlayfairDisplay-Italic.woff") format("woff");
+}
+
+/* Global */
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Body */
+
+.page {
+  height: 100%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.page__body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  color: #ae7c78;
+  background-color: #ffffff;
+}
+
+.nav__link {
+  color: #ae7c78;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 120px 80px;
+}
+
+.section__title {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ae7c78;
+}
+
+.main-title,
+.discount__title {
+  font-size: 44px;
+  line-height: 59px;
+}
+
+.main-title--italic {
+  font-style: italic;
+}
+
+.lead {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #ae7c78;
+}
+
+.item__title {
+  font-weight: 500;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+}
+
+.content__title,
+.content__price {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.catalog__item {
+  background-color: #ae7c78;
+}
+
+.catalog__item--wedding {
+  background: url("img/raster/catalog-wedding.jpg") no-repeat;
+  border-radius: 10px;
+}
+
+.catalog__item--peony {
+  background: url("img/raster/catalog-peony.jpg") no-repeat;
+  border-radius: 10px;
+}
+
+.catalog__item--select {
+  background: url("img/raster/catalog-select.jpg") no-repeat;
+  border-radius: 10px;
+}
+
+.catalog__link {
+  color: #ffffff;
+}
+
+.discount__wrapper {
+  background-color: #ae7c78;
+}
+
+.discount__title {
+  letter-spacing: 0.02em;
+}
+
+.discount__title,
+.discount__lead {
+  color: #ffffff;
+}
+
+.order-step__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.social__icon--instagram,
+.social__icon--facebook,
+.social__icon--twitter {
+  fill: #d89999;
+}
+
+.review__name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contacts__wrapper {
+  background: #f7fafc;
+  box-shadow: 0px 4px 40px rgba(217, 217, 217, 0.3);
+  border-radius: 12px;
+}
+
+.contacts__lead {
+  letter-spacing: normal;
+}
+
+.contacts__description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contacts__link {
+  color: #ae7c78;
+}
+
+.page__footer {
+  background-color: #ae7c78;
+}
+
+.nav__link--footer {
+  color: #ffffff;
+}
+
+.social__icon--footer {
+  fill: #ffffff;
+}
