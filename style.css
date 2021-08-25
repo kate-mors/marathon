@@ -94,6 +94,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  color: #ae7c78;
 }
 
 .page__body {
@@ -103,7 +104,6 @@ a {
   display: grid;
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
-  color: #ae7c78;
   background-color: #ffffff;
 }
 
@@ -117,14 +117,17 @@ a {
 }
 
 .section__title {
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
   color: #ae7c78;
 }
 
 .main-title,
 .discount__title {
+  font-weight: 400;
   font-size: 44px;
   line-height: 59px;
 }
@@ -148,7 +151,7 @@ a {
 }
 
 .title {
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -197,12 +200,6 @@ a {
 .discount__title,
 .discount__lead {
   color: #ffffff;
-}
-
-.order-step__title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
 }
 
 .social__icon--instagram,
