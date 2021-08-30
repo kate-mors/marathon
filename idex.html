@@ -38,7 +38,13 @@
       as="font"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      href="fonts/PlayfairDisplay-Italic.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Botanika - авторские букеты в Петербурге</title>
   </head>
 
@@ -333,9 +339,9 @@
       </symbol>
     </svg>
 
-    <header class="page__header">
-      <div class="page__logo-container">
-        <a class="page__logo logo">
+    <header class="page__header header" id="top">
+      <div class="header__container container">
+        <a class="header__logo logo">
           <svg
             class="logo__icon logo__icon--header"
             width="100"
@@ -345,37 +351,36 @@
             <use xlink:href="#logo-header"></use>
           </svg>
         </a>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Доставка и&nbsp;оплата</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Спецпредложения</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Корзина</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      <nav class="page__nav nav nav--header">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Каталог</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Доставка и&nbsp;оплата</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Отзывы</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Спецпредложения</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Контакты</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Корзина</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="page__main">
       <section class="section intro">
         <div class="intro__wrapper container">
           <div class="intro__content">
-            <h1 class="section__title main-title">
+            <h1 class="section__title main-title intro__title">
               Авторские букеты <br />
               <span class="main-title--italic">в&nbsp;Петербурге</span>
             </h1>
@@ -384,27 +389,25 @@
             </p>
             <a href="#" class="intro__link button">Смотреть каталог</a>
           </div>
-          <div class="intro__img">
-            <img
-              src="img/raster/intro-1.jpg"
-              width="386"
-              height="404"
-              alt
-              aria-describedby="intro-img"
-              class="intro__picture"
-            />
-            <img
-              src="img/raster/intro-2.jpg"
-              width="387"
-              height="420"
-              alt
-              aria-describedby="intro-img"
-              class="intro__picture"
-            />
-            <p class="visually-hidden" id="intro-img">
-              Примеры авторских букетов сервиса Botanika
-            </p>
-          </div>
+          <img
+            src="img/raster/intro-tulips.jpg"
+            width="386"
+            height="404"
+            alt
+            aria-describedby="intro-img"
+            class="intro__picture"
+          />
+          <img
+            src="img/raster/intro-roses.jpg"
+            width="387"
+            height="420"
+            alt
+            aria-describedby="intro-img"
+            class="intro__picture"
+          />
+          <p class="visually-hidden" id="intro-img">
+            Примеры авторских букетов сервиса Botanika
+          </p>
         </div>
       </section>
 
@@ -413,21 +416,27 @@
           <h2 class="features__title visually-hidden">Наши преимущества</h2>
           <ul class="features__list">
             <li class="features__item item">
-              <h3 class="item__title">Быстрая доставка</h3>
+              <h3 class="item__title item__title--delivery">
+                Быстрая доставка
+              </h3>
               <p class="item__text">
                 Можем собрать букет и&nbsp;передать его в&nbsp;доставку всего
                 за&nbsp;час.
               </p>
             </li>
             <li class="features__item item">
-              <h3 class="item__title">Всегда свежие цветы</h3>
+              <h3 class="item__title item__title--fresh">
+                Всегда свежие цветы
+              </h3>
               <p class="item__text">
                 Тщательно следим за&nbsp;состоянием цветов, а&nbsp;опытные
                 флористы отбирают для букетов каждый цветок.
               </p>
             </li>
             <li class="features__item item">
-              <h3 class="item__title">Отправляем фото цветов</h3>
+              <h3 class="item__title item__title--photo">
+                Отправляем фото цветов
+              </h3>
               <p class="item__text">
                 Перед доставкой сделаем фотографию букета и&nbsp;отправим вам.
               </p>
@@ -453,7 +462,7 @@
             <li class="slider__item">
               <div class="slider__image">
                 <img
-                  src="img/raster/bestseller-1.png"
+                  src="img/raster/bestseller-roses.png"
                   width="387"
                   height="438"
                   alt="Букет Нежность"
@@ -505,14 +514,16 @@
 
       <section class="section discount">
         <div class="discount__wrapper container">
-          <h2 class="section__title discount__title">
-            Скидка&nbsp;<nobr>10%</nobr> на&nbsp;первый заказ
-          </h2>
-          <p class="discount__lead lead">
-            Если заказываете у&nbsp;нас букет впервые&nbsp;&mdash; при
-            оформлении заказа введите промокод &laquo;Botanika2021&raquo;
-            и&nbsp;получите скидку&nbsp;<nobr>10%</nobr>.
-          </p>
+          <div class="discount__content">
+            <h2 class="section__title discount__title">
+              Скидка&nbsp;<nobr>10%</nobr> на&nbsp;первый заказ
+            </h2>
+            <p class="discount__lead lead">
+              Если заказываете у&nbsp;нас букет впервые&nbsp;&mdash; при
+              оформлении заказа введите промокод &laquo;Botanika2021&raquo;
+              и&nbsp;получите скидку&nbsp;<nobr>10%</nobr>.
+            </p>
+          </div>
           <div class="discount__image">
             <img
               src="img/raster/discount.jpg"
@@ -532,27 +543,46 @@
           </h2>
           <ul class="steps__list">
             <li class="steps__item order-step item">
-              <h3 class="order-step__title item__title">Заказ</h3>
+              <h3
+                class="order-step__title order-step__title--order item__title"
+              >
+                Заказ
+              </h3>
               <p class="order-step__description">
                 Выбирите понравившейся букет из&nbsp;каталога и&nbsp;оформите
                 заказ
               </p>
             </li>
             <li class="steps__item order-step item">
-              <h3 class="order-step__title item__title">Уточнение деталей</h3>
+              <h3
+                class="order-step__title order-step__title--details item__title"
+              >
+                Уточнение деталей
+              </h3>
               <p class="order-step__description">
                 Наш флорист позвонит вам после оформления заказа, чтобы уточнить
                 детали
               </p>
             </li>
             <li class="steps__item order-step item">
-              <h3 class="order-step__title item__title">Оплата</h3>
+              <h3
+                class="order-step__title order-step__title--payment item__title"
+              >
+                Оплата
+              </h3>
               <p class="order-step__description">
                 Оплатить заказ можно онлайн на&nbsp;сайте или при&nbsp;получении
               </p>
             </li>
             <li class="steps__item order-step item">
-              <h3 class="order-step__title item__title">Доставка</h3>
+              <h3
+                class="
+                  order-step__title order-step__title--delivery
+                  item__title
+                "
+              >
+                Доставка
+              </h3>
               <p class="order-step__description">
                 Курьер позвонит за&nbsp;час до&nbsp;прибытия и&nbsp;доставит
                 заказ вовремя
@@ -564,88 +594,85 @@
 
       <section class="section news">
         <div class="news__wrapper container">
-          <h2 class="section__title news__title title">
-            Следите за&nbsp;нашими новостями
-          </h2>
-          <p class="news__lead lead">
-            Подписывайтесь на&nbsp;наши соцсети и&nbsp;узнавайте о&nbsp;новинках
-            и&nbsp;акциях первым.
-          </p>
-          <div class="news__social social">
-            <ul class="social__list">
-              <li class="social__item">
-                <a href="#" class="social__link social__link--intsagram">
-                  <svg
-                    class="social__icon social__icon--instagram"
-                    width="21"
-                    height="20"
-                    aria-label="Логотип Instagram"
-                  >
-                    <use xlink:href="#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="#" class="social__link social__link--facebook">
-                  <svg
-                    class="social__icon social__icon--facebook"
-                    width="12"
-                    height="20"
-                    aria-label="Логотип Facebook"
-                  >
-                    <use xlink:href="#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="#" class="social__link social__link--twitter">
-                  <svg
-                    class="social__icon social__icon--twitter"
-                    width="26"
-                    height="20"
-                    aria-label="Логотип Twitter"
-                  >
-                    <use xlink:href="#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <div class="news__content">
+            <h2 class="section__title news__title title">
+              Следите за&nbsp;нашими новостями
+            </h2>
+            <p class="news__lead lead">
+              Подписывайтесь на&nbsp;наши соцсети и&nbsp;узнавайте
+              о&nbsp;новинках и&nbsp;акциях первым.
+            </p>
+            <div class="news__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link social__link--intsagram">
+                    <svg
+                      class="social__icon social__icon--instagram"
+                      width="21"
+                      height="20"
+                      aria-label="Логотип Instagram"
+                    >
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link social__link--facebook">
+                    <svg
+                      class="social__icon social__icon--facebook"
+                      width="12"
+                      height="20"
+                      aria-label="Логотип Facebook"
+                    >
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link social__link--twitter">
+                    <svg
+                      class="social__icon social__icon--twitter"
+                      width="26"
+                      height="20"
+                      aria-label="Логотип Twitter"
+                    >
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-
-        <div class="news__images images">
-          <ul class="images__list">
-            <li class="images__item">
-              <img
-                src="img/raster/news-1.jpg"
-                width="285"
-                height="220"
-                alt
-                aria-describedby="news-img"
-                class="image__picture"
-              />
-            </li>
-            <li class="images__item">
-              <img
-                src="img/raster/news-2.jpg"
-                width="285"
-                height="220"
-                alt
-                aria-describedby="news-img"
-                class="image__picture"
-              />
-            </li>
-            <li class="images__item">
-              <img
-                src="img/raster/news-3.jpg"
-                width="387"
-                height="460"
-                alt
-                aria-describedby="news-img"
-                class="image__picture"
-              />
-            </li>
-          </ul>
+          <div class="news__image">
+            <img
+              src="img/raster/news-cabbages.jpg"
+              width="285"
+              height="220"
+              alt
+              aria-describedby="news-img"
+              class="image__picture"
+            />
+          </div>
+          <div class="news__image">
+            <img
+              src="img/raster/news-roses.jpg"
+              width="285"
+              height="220"
+              alt
+              aria-describedby="news-img"
+              class="image__picture"
+            />
+          </div>
+          <div class="news__image news__image--big">
+            <img
+              src="img/raster/news-carnations.jpg"
+              width="387"
+              height="460"
+              alt
+              aria-describedby="news-img"
+              class="image__picture"
+            />
+          </div>
           <p class="visually-hidden" id="news-img">
             Примеры авторских букетов сервиса Botanika
           </p>
@@ -678,7 +705,7 @@
               <blockquote class="review">
                 <p class="review__text">
                   Выбор букетов на&nbsp;любой вкус и&nbsp;цену. Бывают хорошие
-                  скидки, а флористы всегда помогут и&nbsp;точно соберут
+                  скидки, а&nbsp;флористы всегда помогут и&nbsp;точно соберут
                   красивый букет!
                 </p>
                 <cite class="review__name">Ольга</cite>
@@ -692,10 +719,15 @@
         <h2 class="section__title visually-hidden">Контакты</h2>
         <div class="contacts__wrapper">
           <h3 class="contacts__lead title">Мы ждем вас</h3>
-          <dl>
+          <dl class="contacts__data">
             <dt class="contacts__ctr">Приходите к&nbsp;нам:</dt>
             <dd class="contacts__description">
-              Санкт-Петербург, <br />ул.&nbsp;Большая Конюшенная,&nbsp;19
+              <a
+                href="https://goo.gl/maps/Gbdj4DxJEg4LhdXr8"
+                class="contacts__link"
+              >
+                Санкт-Петербург, <br />ул.&nbsp;Большая Конюшенная,&nbsp;19
+              </a>
             </dd>
             <dt class="contacts__ctr">Режим работы:</dt>
             <dd class="contacts__description">
@@ -718,9 +750,9 @@
       </section>
     </main>
 
-    <footer class="page__footer">
-      <div class="page__logo-container">
-        <a class="page__logo logo">
+    <footer class="page__footer footer">
+      <div class="footer__container container">
+        <a class="footer__logo logo" href="#top">
           <svg
             class="logo__icon logo__icon--footer"
             width="100"
@@ -730,71 +762,71 @@
             <use xlink:href="#logo-footer"></use>
           </svg>
         </a>
-      </div>
-
-      <div class="page__nav nav nav--footer">
-        <ul class="nav__list">
-          <li class="nav__item">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
             <a href="#" class="nav__link nav__link--footer">Каталог</a>
           </li>
-          <li class="nav__item">
+          <li class="footer__nav-item">
             <a href="#" class="nav__link nav__link--footer"
               >Доставка и&nbsp;оплата</a
             >
           </li>
-          <li class="nav__item">
+          <li class="footer__nav-item">
             <a href="#" class="nav__link nav__link--footer">Отзывы</a>
           </li>
-          <li class="nav__item">
+          <li class="footer__nav-item">
             <a href="#" class="nav__link nav__link--footer">Спецпредложения</a>
           </li>
-          <li class="nav__item">
+          <li class="footer__nav-item">
             <a href="#" class="nav__link nav__link--footer">Контакты</a>
           </li>
         </ul>
-      </div>
-
-      <div class="page__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--intsagram">
-              <svg
-                class="
-                  social__icon social__icon--instagram social__icon--footer
-                "
-                width="21"
-                height="20"
-                aria-label="Логотип Instagram"
-              >
-                <use xlink:href="#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--facebook">
-              <svg
-                class="social__icon social__icon--facebook social__icon--footer"
-                width="12"
-                height="20"
-                aria-label="Логотип Facebook"
-              >
-                <use xlink:href="#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--twitter">
-              <svg
-                class="social__icon social__icon--twitter social__icon--footer"
-                width="26"
-                height="20"
-                aria-label="Логотип Twitter"
-              >
-                <use xlink:href="#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--intsagram">
+                <svg
+                  class="
+                    social__icon social__icon--instagram social__icon--footer
+                  "
+                  width="21"
+                  height="20"
+                  aria-label="Логотип Instagram"
+                >
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">
+                <svg
+                  class="
+                    social__icon social__icon--facebook social__icon--footer
+                  "
+                  width="12"
+                  height="20"
+                  aria-label="Логотип Facebook"
+                >
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--twitter">
+                <svg
+                  class="
+                    social__icon social__icon--twitter social__icon--footer
+                  "
+                  width="26"
+                  height="20"
+                  aria-label="Логотип Twitter"
+                >
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
