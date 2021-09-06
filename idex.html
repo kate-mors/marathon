@@ -379,7 +379,7 @@
     <main class="page__main">
       <section class="section intro">
         <div class="intro__wrapper container">
-          <div class="intro__content">
+          <div class="intro__content intro__item">
             <h1 class="section__title main-title intro__title">
               Авторские букеты <br />
               <span class="main-title--italic">в&nbsp;Петербурге</span>
@@ -395,7 +395,7 @@
             height="404"
             alt
             aria-describedby="intro-img"
-            class="intro__picture"
+            class="intro__picture intro__item"
           />
           <img
             src="img/raster/intro-roses.jpg"
@@ -403,7 +403,7 @@
             height="420"
             alt
             aria-describedby="intro-img"
-            class="intro__picture"
+            class="intro__picture intro__item"
           />
           <p class="visually-hidden" id="intro-img">
             Примеры авторских букетов сервиса Botanika
@@ -415,28 +415,22 @@
         <div class="features__wrapper container">
           <h2 class="features__title visually-hidden">Наши преимущества</h2>
           <ul class="features__list">
-            <li class="features__item item">
-              <h3 class="item__title item__title--delivery">
-                Быстрая доставка
-              </h3>
+            <li class="features__item item item--delivery">
+              <h3 class="item__title">Быстрая доставка</h3>
               <p class="item__text">
                 Можем собрать букет и&nbsp;передать его в&nbsp;доставку всего
                 за&nbsp;час.
               </p>
             </li>
-            <li class="features__item item">
-              <h3 class="item__title item__title--fresh">
-                Всегда свежие цветы
-              </h3>
+            <li class="features__item item item--fresh">
+              <h3 class="item__title">Всегда свежие цветы</h3>
               <p class="item__text">
                 Тщательно следим за&nbsp;состоянием цветов, а&nbsp;опытные
                 флористы отбирают для букетов каждый цветок.
               </p>
             </li>
-            <li class="features__item item">
-              <h3 class="item__title item__title--photo">
-                Отправляем фото цветов
-              </h3>
+            <li class="features__item item item--photo">
+              <h3 class="item__title">Отправляем фото цветов</h3>
               <p class="item__text">
                 Перед доставкой сделаем фотографию букета и&nbsp;отправим вам.
               </p>
@@ -447,17 +441,7 @@
 
       <section class="section bestseller">
         <div class="bestseller__slider slider">
-          <h2 class="section__title bestseller__title title">
-            Популярные букеты
-          </h2>
-          <button
-            type="button"
-            class="slider__button slider__button--back"
-          ></button>
-          <button
-            type="button"
-            class="slider__button slider__button--forward"
-          ></button>
+          <h2 class="section__title slider__title title">Популярные букеты</h2>
           <ul class="slider__list">
             <li class="slider__item">
               <div class="slider__image">
@@ -483,32 +467,42 @@
               </div>
             </li>
           </ul>
+          <div class="slider__buttons">
+            <button
+              type="button"
+              class="slider__button slider__button--back"
+            ></button>
+            <button
+              type="button"
+              class="slider__button slider__button--forward"
+            ></button>
+          </div>
         </div>
       </section>
 
       <section class="section catalog">
         <div class="catalog__wrapper container">
           <h2 class="catalog__title visually-hidden">Разделы каталога</h2>
-          <ul class="catalog__list">
-            <li class="catalog__item catalog__item--wedding">
+          <div class="catalog__list">
+            <article class="catalog__item catalog__item--wedding">
               <a href="#" class="catalog__link">
                 <h3 class="link__title title">Свадебные букеты</h3>
                 <p class="link__lead">Букеты для&nbsp;невест</p>
               </a>
-            </li>
-            <li class="catalog__item catalog__item--peony">
+            </article>
+            <article class="catalog__item catalog__item--peony">
               <a href="#" class="catalog__link">
                 <h3 class="link__title title">Букеты с&nbsp;пионами</h3>
                 <p class="link__lead">Букеты с&nbsp;сезонными пионами</p>
               </a>
-            </li>
-            <li class="catalog__item catalog__item--select">
+            </article>
+            <article class="catalog__item catalog__item--select">
               <a href="#" class="catalog__link">
                 <h3 class="link__title title">Выбрать букет</h3>
                 <p class="link__lead">Букеты в&nbsp;ассортименте</p>
               </a>
-            </li>
-          </ul>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -542,47 +536,28 @@
             4 шага к&nbsp;идеальному букету
           </h2>
           <ul class="steps__list">
-            <li class="steps__item order-step item">
-              <h3
-                class="order-step__title order-step__title--order item__title"
-              >
-                Заказ
-              </h3>
+            <li class="steps__item steps__item--order order-step">
+              <h3 class="order-step__title">Заказ</h3>
               <p class="order-step__description">
                 Выбирите понравившейся букет из&nbsp;каталога и&nbsp;оформите
                 заказ
               </p>
             </li>
-            <li class="steps__item order-step item">
-              <h3
-                class="order-step__title order-step__title--details item__title"
-              >
-                Уточнение деталей
-              </h3>
+            <li class="steps__item steps__item--details order-step item">
+              <h3 class="order-step__title">Уточнение деталей</h3>
               <p class="order-step__description">
                 Наш флорист позвонит вам после оформления заказа, чтобы уточнить
                 детали
               </p>
             </li>
-            <li class="steps__item order-step item">
-              <h3
-                class="order-step__title order-step__title--payment item__title"
-              >
-                Оплата
-              </h3>
+            <li class="steps__item steps__item--payment order-step">
+              <h3 class="order-step__title">Оплата</h3>
               <p class="order-step__description">
                 Оплатить заказ можно онлайн на&nbsp;сайте или при&nbsp;получении
               </p>
             </li>
-            <li class="steps__item order-step item">
-              <h3
-                class="
-                  order-step__title order-step__title--delivery
-                  item__title
-                "
-              >
-                Доставка
-              </h3>
+            <li class="steps__item steps__item--delivery order-step">
+              <h3 class="order-step__title">Доставка</h3>
               <p class="order-step__description">
                 Курьер позвонит за&nbsp;час до&nbsp;прибытия и&nbsp;доставит
                 заказ вовремя
@@ -717,6 +692,15 @@
 
       <section class="section contacts">
         <h2 class="section__title visually-hidden">Контакты</h2>
+        <div class="contacts__map-wrapper">
+          <img
+            src="/img/raster/map.jpg"
+            alt="Карта проезда к магазину Botanika"
+            width="1440"
+            height="644"
+            class="contacts__map"
+          />
+        </div>
         <div class="contacts__wrapper">
           <h3 class="contacts__lead title">Мы ждем вас</h3>
           <dl class="contacts__data">
