@@ -44,6 +44,7 @@
       as="font"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Botanika - авторские букеты в Петербурге</title>
   </head>
@@ -692,15 +693,17 @@
 
       <section class="section contacts">
         <h2 class="section__title visually-hidden">Контакты</h2>
-        <img
-          src="/img/raster/map.jpg"
-          alt="Карта проезда к магазину Botanika"
-          width="1440"
-          height="644"
-          class="contacts__map"
-        />
+        <div class="contacts__map-wrapper" id="map">
+          <img
+            src="/img/raster/map.jpg"
+            alt="Карта проезда к магазину Botanika"
+            width="1440"
+            height="644"
+            class="contacts__map"
+          />
+        </div>
         <div class="contacts__container container">
-          <div class="contacts__wrapper">
+          <div class="contacts__card">
             <h3 class="contacts__lead title">Мы ждем вас</h3>
             <dl class="contacts__data">
               <dt class="contacts__ctr">Приходите к&nbsp;нам:</dt>
@@ -813,5 +816,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="leaflet/leaflet.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
