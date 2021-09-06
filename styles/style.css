@@ -74,15 +74,6 @@ button {
   background-color: transparent;
 }
 
-button:hover {
-  opacity: 0.7;
-}
-
-button:active,
-button:focus {
-  opacity: 0.5;
-}
-
 a {
   display: block;
   text-decoration: none;
@@ -150,9 +141,10 @@ a:focus {
 
 .main-title,
 .discount__title {
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 400;
-  font-size: 44px;
-  line-height: 59px;
+  font-size: 55px;
+  line-height: 56px;
 }
 
 .main-title--italic {
@@ -168,7 +160,6 @@ a:focus {
 .button {
   display: inline-block;
   width: 285px;
-  height: 80px;
   padding: 30px 60px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -182,6 +173,15 @@ a:focus {
   cursor: pointer;
 }
 
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:active,
+.button:focus {
+  opacity: 0.5;
+}
+
 .item__title {
   font-weight: 500;
 }
@@ -190,13 +190,13 @@ a:focus {
   font-family: "Playfair Display", "Times New Roman", serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 44px;
   line-height: 48px;
   letter-spacing: 0.02em;
 }
 
 .header {
-  margin: 26px 0 0;
+  margin: 25px 0 0;
   border-top: 1px solid #ae7c78;
   border-bottom: 1px solid #ae7c78;
 }
@@ -241,7 +241,6 @@ a:focus {
 }
 
 .intro__wrapper {
-  height: 464px;
   margin: 80px auto 48px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -249,7 +248,7 @@ a:focus {
 }
 
 .intro__item:nth-child(2) {
-  align-self: end;
+  margin-top: 58px;
 }
 
 .intro__title {
@@ -287,7 +286,7 @@ a:focus {
   content: "";
   position: absolute;
   top: 0;
-  left: 28px;
+  left: 29px;
   width: 52px;
   height: 52px;
   display: block;
@@ -298,17 +297,25 @@ a:focus {
   content: "";
   position: absolute;
   top: 0;
-  left: 20px;
+  left: 23px;
   width: 59px;
   height: 52px;
   display: block;
   background: url("../img/svg/features-photo.svg") no-repeat;
 }
 
+.item__title {
+  margin-bottom: 10px;
+}
+
+.item__text {
+  margin: 0;
+}
+
 .bestseller__slider {
   position: relative;
   width: 794px;
-  margin: 0 auto 80px;
+  margin: 0 auto 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,6 +328,7 @@ a:focus {
 .slider__buttons {
   display: flex;
   justify-content: center;
+  margin-top: -10px;
 }
 
 .slider__button {
@@ -355,11 +363,6 @@ a:focus {
   grid-area: slider__content;
 }
 
-.slider__picture {
-  width: 100%;
-  height: auto;
-}
-
 .content__title {
   margin: 27px 0 20px;
 }
@@ -376,7 +379,7 @@ a:focus {
 }
 
 .content__data {
-  margin: 0 0 24px;
+  margin: 0 0 22px;
 }
 
 .content__price {
@@ -412,7 +415,7 @@ a:focus {
 .catalog__link {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 442px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,28 +450,24 @@ a:focus {
 }
 
 .discount__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 590px;
   background-color: #ae7c78;
 }
 
 .discount__content {
-  width: 50%;
-  padding: 40px 102px 64px 120px;
+  padding: 40px 102px 64px;
   box-sizing: border-box;
 }
 
 .discount__title {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   letter-spacing: 0.02em;
 }
 
 .discount__title,
 .discount__lead {
   color: #ffffff;
-}
-
-.discount__image {
-  width: 50%;
 }
 
 .steps__wrapper {
@@ -490,7 +489,7 @@ a:focus {
 
 .steps__item {
   position: relative;
-  padding-top: 60px;
+  padding-top: 62px;
 }
 
 .steps__item::before {
@@ -527,6 +526,11 @@ a:focus {
 
 .order-step__title {
   margin: 0 0 8px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
 }
 
@@ -549,12 +553,12 @@ a:focus {
   grid-area: content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
 .news__title {
-  margin-bottom: 40px;
+  margin: 65px 0 43px;
 }
 
 .news__lead {
@@ -591,14 +595,13 @@ a:focus {
 }
 
 .reviews__wrapper {
-  padding: 40px 0 64px;
+  padding: 34px 0 62px;
   text-align: center;
   border: 1px solid #ae7c78;
-  box-sizing: border-box;
 }
 
 .reviews__title {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .reviews__list {
@@ -636,23 +639,28 @@ a:focus {
 .contacts {
   position: relative;
   width: 100%;
-  height: 644px;
+  min-height: 644px;
+  overflow: hidden;
 }
 
-.contacts__map-wrapper {
+.contacts__map {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contacts__container {
+  margin-bottom: 0;
 }
 
 .contacts__wrapper {
   position: relative;
   top: 47px;
-  left: 222px;
+  left: 102px;
+  bottom: 77px;
   width: 386px;
-  padding: 45px 35px;
+  padding: 45px 35px 58px;
   background: #f7fafc;
   box-shadow: 0px 4px 40px rgba(217, 217, 217, 0.3);
   border-radius: 12px;
@@ -661,7 +669,7 @@ a:focus {
 }
 
 .contacts__lead {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   letter-spacing: normal;
 }
 
@@ -674,7 +682,7 @@ a:focus {
 }
 
 .contacts__ctr:first-child {
-  margin-bottom: 21px;
+  margin-bottom: 16px;
 }
 
 .contacts__ctr:last-child {
@@ -682,14 +690,14 @@ a:focus {
 }
 
 .contacts__description {
-  margin: 0 0 30px;
+  margin: 0 0 32px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
 }
 
 .contacts__description:nth-of-type(3) {
-  margin: 0 0 34px;
+  margin: 0 0 30px;
 }
 
 .contacts__description:last-of-type {
@@ -708,18 +716,17 @@ a:focus {
 
 .footer__container {
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 200px 1fr 100px;
 }
 
 .footer__logo {
-  height: 100%;
-  margin: 24px 103px 0 0;
+  margin-top: 24px;
+  justify-self: start;
 }
 
 .footer__nav-list {
-  margin: 30px 0 0;
+  margin: 20px 0 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -734,8 +741,8 @@ a:focus {
 }
 
 .footer__social {
-  height: 100%;
-  margin: 30px 0 0 105px;
+  margin-top: 30px;
+  justify-self: end;
 }
 
 .nav__link--footer {
